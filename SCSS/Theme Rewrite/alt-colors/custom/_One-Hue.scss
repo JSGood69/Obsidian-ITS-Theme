@@ -1,0 +1,280 @@
+@use "sass:math";
+@use "sass:color";
+
+// Theme colors
+// obsidian default colors used as base
+
+//--color-blue
+$theme-light-color: hsl(212, 93%, 45%);
+$theme-dark-color: hsl(212, 100%, 50%);
+$lt-50: color.scale($theme-light-color, $lightness: -50%);
+$dt-50: color.scale($theme-dark-color, $lightness: -50%);
+
+//-----------------------------------------------------------
+// theme-light variables //
+// RGB
+$lt-r: color.red($theme-light-color);
+$lt-g: color.green($theme-light-color);
+$lt-b: color.blue($theme-light-color);
+$lt-rgb: rbg($lt-r, $lt-g, $lt-b);
+
+// HSL
+$lt-h: math.round(color.hue($theme-light-color));
+$lt-s: math.round(color.saturation($theme-light-color));
+$lt-l: math.round(color.lightness($theme-light-color));
+$lt-hsl: hsl($lt-h, $lt-s, $lt-l);
+
+// color lightnes variables
+$lt-l-100: hsl($lt-h, $lt-s, 100%);
+$lt-l-95: hsl($lt-h, $lt-s, 95%);
+$lt-l-90: hsl($lt-h, $lt-s, 90%);
+$lt-l-85: hsl($lt-h, $lt-s, 85%);
+$lt-l-80: hsl($lt-h, $lt-s, 80%);
+$lt-l-75: hsl($lt-h, $lt-s, 75%);
+$lt-l-70: hsl($lt-h, $lt-s, 70%);
+$lt-l-65: hsl($lt-h, $lt-s, 65%);
+$lt-l-60: hsl($lt-h, $lt-s, 60%);
+$lt-l-55: hsl($lt-h, $lt-s, 55%);
+$lt-l-50: hsl($lt-h, $lt-s, 50%);
+$lt-l-45: hsl($lt-h, $lt-s, 45%);
+$lt-l-40: hsl($lt-h, $lt-s, 40%);
+$lt-l-35: hsl($lt-h, $lt-s, 35%);
+$lt-l-30: hsl($lt-h, $lt-s, 30%);
+$lt-l-25: hsl($lt-h, $lt-s, 25%);
+$lt-l-20: hsl($lt-h, $lt-s, 20%);
+$lt-l-15: hsl($lt-h, $lt-s, 15%);
+$lt-l-10: hsl($lt-h, $lt-s, 10%);
+$lt-l-5: hsl($lt-h, $lt-s, 5%);
+$lt-l-0: hsl($lt-h, $lt-s, 0%);
+
+// color saturation and lightness variables (custom)
+$lt-sl-0-94: hsl($lt-h, 0%, 94%); //l
+$lt-sl-10-90: hsl($lt-h, 10%, 90%); //l
+$lt-sl-10-92: hsl($lt-h, 10%, 92%); //l
+$lt-sl-20-10: hsl($lt-h, 20%, 10%); //l
+$lt-sl-20-30: hsl($lt-h, 20%, 30%); //l
+$lt-sl-20-45: hsl($lt-h, 20%, 45%); //l
+$lt-sl-20-55: hsl($lt-h, 20%, 55%); //l
+$lt-sl-20-80: hsl($lt-h, 20%, 80%); //l
+$lt-sl-20-85: hsl($lt-h, 20%, 85%); //l
+
+// color alpha variables
+$lt-a-0: hsla($lt-h, $lt-s, $lt-l, 5%);
+$lt-a-10: hsla($lt-h, $lt-s, $lt-l, 10%);
+$lt-a-20: hsla($lt-h, $lt-s, $lt-l, 20%);
+$lt-a-30: hsla($lt-h, $lt-s, $lt-l, 30%);
+$lt-a-40: hsla($lt-h, $lt-s, $lt-l, 40%);
+$lt-a-50: hsla($lt-h, $lt-s, $lt-l, 50%);
+
+// color Lightness and alpha variables (custom)
+$lt-la-50-10: hsla($lt-h, $lt-s, 50%, 10%);
+
+// theme-dark variables //
+// RGB
+$dk-r: color.red($theme-dark-color);
+$dk-g: color.green($theme-dark-color);
+$dk-b: color.blue($theme-dark-color);
+$dk-rgb: rbg($dk-r, $dk-g, $dk-b);
+
+// HSL
+$dk-h: math.round(color.hue($theme-dark-color));
+$dk-s: math.round(color.saturation($theme-dark-color));
+$dk-l: math.round(color.lightness($theme-dark-color));
+$dk-hsl: hsl($dk-h, $dk-s, $dk-l);
+
+// color lightnes variables
+$dk-l-100: hsl($dk-h, $dk-s, 100%);
+$dk-l-95: hsl($dk-h, $dk-s, 95%);
+$dk-l-90: hsl($dk-h, $dk-s, 90%);
+$dk-l-85: hsl($dk-h, $dk-s, 85%);
+$dk-l-80: hsl($dk-h, $dk-s, 80%);
+$dk-l-75: hsl($dk-h, $dk-s, 75%);
+$dk-l-70: hsl($dk-h, $dk-s, 70%);
+$dk-l-65: hsl($dk-h, $dk-s, 65%);
+$dk-l-60: hsl($dk-h, $dk-s, 60%);
+$dk-l-55: hsl($dk-h, $dk-s, 55%);
+$dk-l-50: hsl($dk-h, $dk-s, 50%);
+$dk-l-45: hsl($dk-h, $dk-s, 45%);
+$dk-l-40: hsl($dk-h, $dk-s, 40%);
+$dk-l-35: hsl($dk-h, $dk-s, 35%);
+$dk-l-30: hsl($dk-h, $dk-s, 30%);
+$dk-l-25: hsl($dk-h, $dk-s, 25%);
+$dk-l-20: hsl($dk-h, $dk-s, 20%);
+$dk-l-15: hsl($dk-h, $dk-s, 15%);
+$dk-l-10: hsl($dk-h, $dk-s, 10%);
+$dk-l-5: hsl($dk-h, $dk-s, 5%);
+$dk-l-0: hsl($dk-h, $dk-s, 0%);
+
+// color saturation and lightness variables (custom)
+$dk-sl-0-10: hsl($dk-h, 0%, 10%);
+$dk-sl-0-17: hsl($dk-h, 0%, 17%);
+$dk-sl-10-5: hsl($dk-h, 10%, 5%);
+$dk-sl-15-10: hsl($dk-h, 15%, 10%);
+$dk-sl-20-7: hsl($dk-h, 20%, 7%);
+$dk-sl-20-10: hsl($dk-h, 20%, 10%);
+$dk-sl-20-15: hsl($dk-h, 20%, 15%);
+$dk-sl-20-24: hsl($dk-h, 20%, 24%);
+$dk-sl-20-25: hsl($dk-h, 20%, 25%);
+$dk-sl-20-30: hsl($dk-h, 20%, 30%);
+$dk-sl-20-45: hsl($dk-h, 20%, 45%);
+$dk-sl-20-55: hsl($dk-h, 20%, 55%);
+$dk-sl-50-70: hsl($dk-h, 50%, 70%);
+
+// color alpha variables
+$dk-a-0: hsla($dk-h, $dk-s, $dk-l, 0%);
+$dk-a-10: hsla($dk-h, $dk-s, $dk-l, 10%);
+$dk-a-20: hsla($dk-h, $dk-s, $dk-l, 20%);
+$dk-a-30: hsla($dk-h, $dk-s, $dk-l, 30%);
+$dk-a-40: hsla($dk-h, $dk-s, $dk-l, 40%);
+$dk-a-50: hsla($dk-h, $dk-s, $dk-l, 50%);
+
+// color Lightness and alpha variables (custom)
+$dk-la-75-40: hsla($dk-h, $dk-s, 75%, 40%);
+
+// Theme //
+.one-hue {
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: "Fira Code", "Fira Code Medium", "Source Code Pro",
+    monospace;
+
+  --hr-icon-symbol: "\e817";
+  --hr-icon-font: var(--its);
+}
+.theme-light {
+  &.one-hue,
+  & .one-hue {
+    --accent: #{$theme-light-color};
+    --lite-accent: #{$lt-l-50};
+    --dark-accent: #{$lt-l-40};
+    --deep-dark-accent: #{$lt-sl-20-10};
+    --accent2: #{$lt-l-50};
+    --accent2-lite: #{$lt-l-70};
+
+    --headers: #{$lt-l-50};
+    --soft-text: #{$lt-sl-20-55};
+    --faint-text: #{$lt-sl-20-45};
+    --code-text: #{$lt-l-50};
+    // --i-at: ;
+    // --footnote: ;
+    --inactive: #{$lt-l-80};
+    --tag-text: #{$lt-l-50};
+
+    --folder: #{$theme-light-color};
+    --folder-open: #{$lt-l-50};
+    // --file: ;
+    --file-icon-color: #{$lt-sl-20-30};
+
+    // --fg: ;
+    --bg: #{$lt-l-85};
+    --code-bg: #{$lt-l-90};
+    // --embed-bg: ;
+    // --aside-bg: ;
+    // --tag: ;
+    // --bttn: ;
+    --dark-sidebar: #{$lt-sl-10-90};
+    --outer-bar: #{$lt-sl-10-92};
+    --note: #{$lt-sl-0-94};
+
+    // --th: ;
+    // --table-header-text: ;
+    --td: #{$lt-la-50-10};
+
+    --table: #{$lt-sl-20-80};
+    --hr: #{$lt-sl-20-85};
+    --hr-icon-color: #{$lt-l-50};
+    --lines: #{$lt-sl-20-80};
+    --outline: #{$lt-l-80};
+
+    // --hr-image: ;
+
+    --highlight: #{$lt-a-20};
+    --hvr: #{$lt-a-30};
+    --hvr-active: #{$lt-a-50};
+
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+    --theme-rainbow-1: #{$lt-l-60};
+    --theme-rainbow-2: #{$lt-l-50};
+    --theme-rainbow-3: #{$lt-l-30};
+    --theme-rainbow-4: #{$lt-l-20};
+    --theme-rainbow-5: #{$lt-l-10};
+    --theme-rainbow-6: #{$lt-l-0};
+  }
+}
+.theme-dark {
+  &.one-hue,
+  & .one-hue {
+    --accent: #{$theme-dark-color};
+    --lite-accent: #{$dk-l-70};
+    --dark-accent: #{$dk-l-30};
+    --deep-dark-accent: #{$dk-sl-20-10};
+    --accent2: #{$dk-l-50};
+    --accent2-lite: #{$dk-sl-50-70};
+
+    //added background
+    // --outer-bar: #0e0f15;
+    // --dark-sidebar: #090c0e;
+    // --side-bar: var(--note);
+    // --note-rgb: 23, 27, 33;
+
+    --headers: #{$dk-l-50};
+    --soft-text: #{$dk-sl-20-55};
+    --faint-text: #{$dk-sl-20-45};
+    --code-text: #{$dk-l-60};
+    // --i-at: ;
+    // --footnote: ;
+    --inactive: #{$dk-la-75-40};
+    --tag-text: #{$dk-l-50};
+
+    --folder: #{$theme-dark-color};
+    --folder-open: #{$dk-l-70};
+    // --file: ;
+    --file-icon-color: #{$dk-sl-20-30};
+
+    // --fg: ;
+    --bg: #{$dk-sl-0-17};
+    --code-bg: #{$dk-sl-20-15};
+    // --embed-bg: ;
+    // --aside-bg: ;
+    // --tag: ;
+    // --bttn: ;
+    --dark-sidebar: #{$dk-sl-20-7};
+    --outer-bar: #{$dk-sl-10-5};
+    --note: #{$dk-sl-15-10};
+
+    // --th: ;
+    // --table-header-text: ;
+    // --td: ;
+
+    --table: #{$dk-sl-20-24};
+    --hr: #{$dk-sl-20-25};
+    --hr-icon-color: #{$dk-l-50};
+    --lines: #{$dk-sl-20-25};
+    // --outline: ;
+
+    // --hr-image: ;
+
+    --highlight: #{$dk-a-30};
+    --hvr: #{$dk-a-40};
+    --hvr-active: #{$dk-a-30};
+
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+    --theme-rainbow-1: #{$dk-l-60};
+    --theme-rainbow-2: #{$dk-l-50};
+    --theme-rainbow-3: #{$dk-l-30};
+    --theme-rainbow-4: #{$dk-l-20};
+    --theme-rainbow-5: #{$dk-l-10};
+    --theme-rainbow-6: #{$dk-l-5};
+  }
+}
